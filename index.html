@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather App</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      select,
+      button {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Weather App</h1>
+
+    <form action="/weather" method="GET">
+      <select name="location" required>
+        <option value="">Select city</option>
+        <option value="Lublin,Poland">Lublin</option>
+        <option value="Kielce,Poland">Kielce</option>
+        <option value="Warsaw,Poland">Warsaw</option>
+      </select>
+
+      <button type="submit">Get Weather</button>
+    </form>
+  </body>
+</html>
